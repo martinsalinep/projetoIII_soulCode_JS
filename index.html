@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="icon" href="img/LOGO-AWA-PRETA.png" />
+  <title>AWA</title>
+
+</head>
+
+<body id="body">
+  <header>
+    <nav class="navBar">
+      <div class="logo">
+        <a href="index.html" class="linkLogoMenu"><img src="./img/LOGO-AWA.png" href="#" class="logoMenu"></a>
+      </div>
+      <ul class="menu">
+        <li class="item1" id="item1"><a href="index.html" class="link">Home</a></li>
+        <li class="item1" id="item2"><a href="#quemSomos" class="link">Quem Somos</a></li>
+        <li class="item1" id="item3"><a href="#projetos" class="link">Projetos</a>
+          <ul class="subLista">
+            <li class="subItem"><a href="./calculadora/calculadora.html" target="_blank" class="link">Calculadora</a>
+            </li>
+            <li class="subItem"><a href="./cadastro/cadastro.html" target="_blank" class="link">Cadastro</a></li>
+            <li class="subItem"><a href="./conversor/conversor.html" target="_blank" class="link">Conversor</a></li>
+          </ul>
+        </li>
+        <li class="item1" id="item4"><a href="#" class="link">Configurações</a>
+          <ul class="subLista">
+            <li class="subItem"><a onclick="mudarEstilo(1)" href="#" class="link">Alterar estilo</a></li>
+            <li class="subItem"><a onclick="mudarEstilo(2)" href="#" class="link">Estilo Padrão</a></li>
+          </ul>
+        </li>
+      </ul>
+      <span>
+        <a onclick="aumentarFonte(1)" ondblclick="aumentarFonte(2)" href="#">
+          <img src="./img/icons8-maiúscula-inicial-48.png" alt="Aumenta Fonte" class="aumentaFonte">
+        </a>
+      </span>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <img src="img/bg01.jpg" class="imagembg01">
+    </section>
+    <h1 style="text-align: center;" id="projetosTitulo"> PROJETOS </h1>
+    <section class="flexProjetos">
+
+      <div class="divLogoProjetos1" id="idlogoProjetos">
+        <img src="img/LOGO-AWA-PRETA.png">
+      </div>
+
+      <div id="projetos">
+
+        <div class="divBotoes">
+          <a href="./calculadora/calculadora.html" target="_blank"><button class="button1"
+              id="calculadora">CALCULADORA</button></a>
+        </div>
+
+        <div class="divBotoes">
+          <a href="./cadastro/cadastro.html" target="_blank"><button class="button1" id="cadastro">CADASTRO</button></a>
+        </div>
+
+        <div class="divBotoes">
+          <a href="./conversor/conversor.html" target="_blank"><button class="button1"
+              id="conversor">CONVERSOR</button></a>
+        </div>
+
+      </div>
+    </section>
+
+    <h1 id="quemSomos"> EQUIPE AWA </h1>
+    <section class="gridFundadores">
+
+      <div class="divMaiorEstilo1" id="idMaiorAruhan">
+
+        <div class="fundadores">
+
+          <img src="img/aruhan.jpg" class="imgFundadores">
+
+        </div>
+
+        <h4 class="tituloFundadores">Aruhan</h4>
+        <p class="descriçaoFundadores">
+          Estudante de Engenharia de Computação e do bootcamp Web Developer Full-Stack da Soul Code.
+          Responsável pela página inicial e projeto de conversor de moedas.
+        </p>
+
+      </div>
+
+
+      <div class="divMaiorEstilo1" id="idMaiorWeele">
+
+        <div class="fundadores">
+
+          <img src="img/weele.jpg" class="imgFundadores">
+
+        </div>
+        <h4 class="tituloFundadores">Welee</h4>
+
+        <p class="descriçaoFundadores">
+          Mercadóloga, possui formação em Marketing e, atualmente é estudante do bootcamp de Web Developer Full-Stack da
+          Soul Code. Responsável pelo projeto de cadastro
+        </p>
+
+      </div>
+
+
+      <div class="divMaiorEstilo1" id="idMaiorAline">
+
+        <div class="fundadores">
+
+          <img src="img/aline.jpg" class="imgFundadores">
+
+        </div>
+        <h4 class="tituloFundadores">Aline</h4>
+        <p class="descriçaoFundadores">
+          Formada em Relações Públicas, atualmente é estudante do bootcamp de Web Developer Full-Stack da Soul Code.
+          Responsável pelo projeto das calculadoras </p>
+
+      </div>
+
+    </section>
+
+  </main>
+  <footer>
+    <a href="#"><img src="./img/LOGO-AWA-PRETA.png" class="logoFooter"></a>
+    <h6 class="textoFooter">© COPYRIGHT 2021 | AWA - TODOS OS DIREITOS RESERVADOS</h6>
+  </footer>
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

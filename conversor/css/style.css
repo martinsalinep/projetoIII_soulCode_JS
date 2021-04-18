@@ -1,0 +1,105 @@
+/* Aumenta a Fonte */
+
+.fonteGrande {
+    font-size: x-large;
+}
+
+.fontePadrao {
+    font-size: medium;
+}
+
+#principal {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 60vw;
+    min-height: 55vh;
+}
+
+#tituloPrincipal {
+    color: #343a40;
+    font-weight: 900;
+    margin: 15px;
+    text-align: center;
+}
+
+#conversor {
+    background-image: linear-gradient(to bottom right, #3c6ba5, #1d2a3a);
+    min-height: 30vh;
+    min-width: 40vw;
+    padding: 40px;
+}
+
+#boxMoedas {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.boxConvert {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    width: 40vh;
+}
+
+select {
+    height: 10vh;
+    width: 15vw;
+}
+
+select:invalid {
+    color: gray;
+}
+
+.moedaInput {
+    height: 10vh;
+    width: 15vw;
+}
+
+
+/* Botões de seleção */
+
+#divBotoes {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px auto;
+    max-width: 60vw;
+}
+
+.botaoConvert {
+    background-color: #1D2A3A;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color: #f1faee;
+    font-weight: 600;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.botaoConvert:hover {
+    background-color: #ffce4b;
+    transition: 0.3s;
+}
+
+
+/* Botões Conversão Estilo 02*/
+
+.botaoConvert2 {
+    background-color: #3c6ba5;
+    border: none;
+    border-radius: 0 10px 0 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color: #f1faee;
+    font-weight: 600;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.botaoConvert2:hover {
+    background-color: #ffce4b;
+    transition: 0.3s;
+}

@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0
+}
+
+
+/* Configuração do Footer */
+
+footer {
+  align-items: center;
+  background-color: #1d2a3a3a;
+  display: flex;
+  flex-direction: column;
+  height: 16vh;
+  justify-content: center;
+  padding: 5px;
+  width: 100%;
+}
+
+.logoFooter {
+ width: 65px;
+}
+
+.textoFooter {
+  color: #343a40;
+}

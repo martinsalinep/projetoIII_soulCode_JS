@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="./js/conversor.js">
+    <link rel="icon" href="../img/LOGO-AWA-PRETA.png" />
+
+    <title>AWA - Conversor</title>
+</head>
+
+<body id="body">
+    <header>
+        <nav class="navBar">
+            <div class="logo">
+                <a href="../index.html" class="linkLogoMenu"><img src="../img/LOGO-AWA.png" href="#" class="logoMenu"></a>
+            </div>
+            <ul class="menu">
+                <li class="item1" id="item1"><a href="../index.html" class="link">Home</a></li>
+                <li class="item1" id="item2"><a href="../index.html#quemsomos" class="link">Quem Somos</a></li>
+                <li class="item1" id="item3"><a href="../index.html#projetos" class="link">Projetos</a>
+                    <ul class="subLista">
+                        <li class="subItem"><a href="../calculadora/calculadora.html" target="_blank" class="link">Calculadora</a>
+                        </li>
+                        <li class="subItem"><a href="../cadastro/cadastro.html" target="_blank" class="link">Cadastro</a></li>
+                        <li class="subItem"><a href="./conversor.html" class="link">Conversor</a></li>
+                    </ul>
+                </li>
+                <li class="item1" id="item4"><a href="#" class="link">Configurações</a>
+                    <ul class="subLista">
+                        <li class="subItem"><a onclick="mudarEstilo(1)" href="#" class="link">Alterar estilo</a></li>
+                        <li class="subItem"><a onclick="mudarEstilo(2)" href="#" class="link">Estilo Padrão</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <span>
+        <a onclick="aumentarFonte(1)" ondblclick="aumentarFonte(2)" href="#">
+          <img src="../img/icons8-maiúscula-inicial-48.png" alt="Aumenta Fonte" class="aumentaFonte">
+        </a>
+      </span>
+        </nav>
+    </header>
+    <main>
+        <h1 id="tituloPrincipal">Conversor de Moedas</h1>
+        <section id="principal">
+
+            <div id="conversor">
+                <div id="boxMoedas">
+                    <div class="boxConvert">
+                        <select id="opcoes1" onchange="update()">
+              <option value="dolarAmericano">Dólar Americano</option>
+              <option value="dolarCanadense">Dólar Canadense</option>
+              <option value="euro">Euro</option>
+              <option value="libra">Libra Esterlina</option>
+              <option value="pesoAr">Peso Argentino</option>
+              <option value="realBr" selected="">Real Brasileiro</option>
+            </select>
+                        <input class="moedaInput" type="text" onkeyup="validador()" id="input" placeholder="Digite o valor">
+                    </div>
+
+                    <div class="boxConvert">
+                        <select id="opcoes2" onchange="update2()">
+              <option value="" disabled selected>Escolha uma moeda</option>
+              <option value="dolarAmericano">Dólar Americano</option>
+              <option value="dolarCanadense">Dólar Canadense</option>
+              <option value="euro">Euro</option>
+              <option value="libra">Libra Esterlina</option>
+              <option value="pesoAr">Peso Argentino</option>
+              <option value="realBr">Real Brasileiro</option>
+            </select>
+                        <input class="moedaInput" type="text" onkeyup="validador()" id="input2" readonly>
+                    </div>
+                </div>
+                <div id="divBotoes">
+                    <button type="button" class="botaoConvert" id="botao" onclick="calcular(update(), update2())">Converter</button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <footer>
+        <a href="#"><img src="../img/LOGO-AWA-PRETA.png" class="logoFooter"></a>
+        <h6 class="textoFooter">© COPYRIGHT 2021 | AWA - TODOS OS DIREITOS RESERVADOS</h6>
+    </footer>
+
+    <script src="./js/conversor.js"></script>
+</body>
+
+</html>

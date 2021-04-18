@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="./js/calculadora.js">
+    <link rel="icon" href="../img/LOGO-AWA-PRETA.png" />
+
+    <title>AWA - Calculadora</title>
+</head>
+
+<body id="body">
+    <header>
+        <nav class="navBar">
+            <div class="logo">
+                <a href="../index.html" class="linkLogoMenu"><img src="../img/LOGO-AWA.png" href="#" class="logoMenu"></a>
+            </div>
+            <ul class="menu">
+                <li class="item1" id="item1"><a href="../index.html" class="link">Home</a></li>
+                <li class="item1" id="item2"><a href="../index.html#quemsomos" class="link">Quem Somos</a></li>
+                <li class="item1" id="item3"><a href="../index.html#projetos" class="link">Projetos</a>
+                    <ul class="subLista">
+                        <li class="subItem"><a href="calculadora.html" class="link">Calculadora</a></li>
+                        <li class="subItem"><a href="../cadastro/cadastro.html" target="_blank" class="link">Cadastro</a></li>
+                        <li class="subItem"><a href="../conversor/conversor.html" target="_blank" class="link">Conversor</a></li>
+                    </ul>
+                </li>
+                <li class="item1" id="item4"><a href="#" class="link">Configurações</a>
+                    <ul class="subLista">
+                        <li class="subItem"><a onclick="mudarEstilo(1)" href="#" class="link">Alterar estilo</a></li>
+                        <li class="subItem"><a onclick="mudarEstilo(2)" href="#" class="link">Estilo Padrão</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <span>
+                <a onclick="aumentarFonte(1)" ondblclick="aumentarFonte(2)" href="#">
+                    <img src="../img/icons8-maiúscula-inicial-48.png" alt="Aumenta Fonte" class="aumentaFonte">
+                </a>
+            </span>
+        </nav>
+    </header>
+    <main>
+        <h1 id="tituloPrincipal">Calculadoras</h1>
+        <section id="principal">
+
+            <div class="calculadora simples" id="calcSimples" style="pointer-events: none;">
+
+                <input id="subDisplaySimples" class="subDisplay" type="text" name="subDisplay" readonly>
+                <input id="displaySimples" class="calcDisplay" type="text" name="display" readonly value="Desabilitada">
+
+                <input class="botao clear" type="button" value="Clear" onclick="limpaDisplaySimples()">
+                <input id="multiplacao" class="botao multiplica" type="button" value="*" onclick="operacaoSimples(this)">
+
+                <input id="num7" class="botao" type="button" value="7" onclick="mostraDisplaySimples(num, 7)">
+                <input id="num8" class="botao" type="button" value="8" onclick="mostraDisplaySimples(num, 8)">
+                <input id="num9" class="botao" type="button" value="9" onclick="mostraDisplaySimples(num, 9)">
+                <input id="divisao" class="botao divide" type="button" value="/" onclick="operacaoSimples(this)">
+
+                <input id="num4" class="botao" type="button" value="4" onclick="mostraDisplaySimples(num, 4)">
+                <input id="num5" class="botao" type="button" value="5" onclick="mostraDisplaySimples(num, 5)">
+                <input id="num6" class="botao" type="button" value="6" onclick="mostraDisplaySimples(num, 6)">
+                <input id="subtracao" class="botao subtrai" type="button" value="-" onclick="operacaoSimples(this)">
+
+                <input id="num1" class="botao" type="button" value="1" onclick="mostraDisplaySimples(num, 1)">
+                <input id="num2" class="botao" type="button" value="2" onclick="mostraDisplaySimples(num, 2)">
+                <input id="num3" class="botao" type="button" value="3" onclick="mostraDisplaySimples(num, 3)">
+                <input id="adicao" class="botao soma" type="button" value="+" onclick="operacaoSimples(this)">
+
+                <input id="ponto" class="botao" type="button" value="." onclick="mostraDisplaySimples(operador,'.')">
+                <input id="num0" class="botao" type="button" value="0" onclick="mostraDisplaySimples(num, 0)">
+                <input id="percentual" class="botao porcentagem" type="button" value="%" onclick="operacaoSimples(this)">
+
+                <input id="igual" class="botao result" type="button" value="=" onclick="igualSimples()">
+
+            </div>
+
+            <div class="calculadora cientifica" id="calcCientifica" style="pointer-events: none;">
+                <input id="subDisplayCientifica" class="subDisplay" type="text" name="subDisplay" readonly>
+                <input id="displayCientifica" class="calcDisplay" type="text" name="display" readonly value="Desabilitada">
+
+                <input class="botao clear" type="button" value="Clear" onclick="limpaDisplayCientifica()">
+
+                <input class="botao potenciaQuadrado" type="button" value="x²" onclick="operacaoCientifica(this)">
+                <input class="botao potenciaCubo" type="button" value="x³" onclick="operacaoCientifica(this)">
+                <input class="botao multiplica" type="button" value="*" onclick="operacaoCientifica(this)">
+
+                <input class="botao raizQuadrada" type="button" value="√" onclick="operacaoCientifica(this)">
+                <input class="botao numeroPi" type="button" value="𝛑" onclick="mostraDisplayCientifica(num, (Math.PI))">
+                <input class="botao divide" type="button" value="/" onclick="operacaoCientifica(this)">
+
+                <input class="botao" type="button" value="7" onclick="mostraDisplayCientifica(num, 7)">
+                <input class="botao" type="button" value="8" onclick="mostraDisplayCientifica(num, 8)">
+                <input class="botao" type="button" value="9" onclick="mostraDisplayCientifica(num, 9)">
+                <input class="botao subtrai" type="button" value="-" onclick="operacaoCientifica(this)">
+
+                <input class="botao" type="button" value="4" onclick="mostraDisplayCientifica(num, 4)">
+                <input class="botao" type="button" value="5" onclick="mostraDisplayCientifica(num, 5)">
+                <input class="botao" type="button" value="6" onclick="mostraDisplayCientifica(num, 6)">
+
+                <input class="botao" type="button" value="1" onclick="mostraDisplayCientifica(num, 1)">
+                <input class="botao" type="button" value="2" onclick="mostraDisplayCientifica(num, 2)">
+                <input class="botao" type="button" value="3" onclick="mostraDisplayCientifica(num, 3)">
+                <input class="botao soma" type="button" value="+" onclick="operacaoCientifica(this)">
+                <input class="botao" type="button" value="0" onclick="mostraDisplayCientifica(num, 0)">
+                <input class="botao" type="button" value="." onclick="mostraDisplayCientifica(num, '.')">
+                <input class="botao porcentagem" type="button" value="%" onclick="operacaoCientifica(this)">
+                <input class="botao result" type="button" value="=" onclick="igualCientifica()">
+            </div>
+        </section>
+
+        <div id="divBotoes">
+            <button type="button" class="botaoSelecionar" id="botaoS" onclick="habilitarCalcSimples()">Calculadora Simples</button>
+            <button type="button" class="botaoSelecionar" id="botaoC" onclick="habilitarCalcCientifica()">Calculadora Científica</button>
+        </div>
+
+    </main>
+    <footer>
+        <a href="#"><img src="../img/LOGO-AWA-PRETA.png" class="logoFooter"></a>
+        <h6 class="textoFooter">© COPYRIGHT 2021 | AWA - TODOS OS DIREITOS RESERVADOS</h6>
+    </footer>
+
+    <script src="./js/calculadora.js"></script>
+
+</body>
+
+</html>

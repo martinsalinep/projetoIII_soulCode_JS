@@ -1,0 +1,132 @@
+/* Imagem Pagina Principal*/
+
+.imagembg01 {
+  width: 100%;
+  height: 520px;
+}
+
+/* Flexbox dos Projetos e seus botões */
+
+#projetosTitulo {
+  color: #343a40;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.flexProjetos {
+  width: 100%;
+  height: 450px;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+}
+
+#projetos {
+  width: 40vw;
+  height: auto;
+  justify-content: space-around;
+  display: flex;
+}
+
+.divLogoProjetos1 {
+  border: 7px solid #23a7f1;
+  background-color: #dfdfdf;
+  border-radius: 100%;
+  padding: 80px;
+  width: 400px;
+  height: 400px;
+}
+
+.divLogoProjetos2 {
+  border: 7px solid #23a7f1;
+  border-radius: 100%;
+  padding: 80px;
+  width: 400px;
+  height: 400px;
+}
+
+.divBotoes {
+  width: 170px;
+  height: 100px;
+}
+
+.button1 {
+  border: 7px solid #23a7f1;
+  background-color: #1D2A3A;
+  border-radius: 15px 0 15px 0;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+}
+
+.button2 {
+  background-color: white;
+  border: 5px solid #23a7f1;
+  border-radius: 15px 0 15px 0;
+  color: #23a7f1;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Grid Fundadores*/
+
+#quemSomos {
+  color: #343a40;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.gridFundadores {
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 70px;
+  display: grid;
+}
+
+.divMaiorEstilo1 {
+  background-color: rgb(216, 216, 216);
+  border-radius: 70px 0 70px 0;
+  padding: 5px;
+  width: 85%;
+  height: 100%;
+}
+
+.divMaiorEstilo2 {
+  border: 7px solid #23a7f1;
+  background-color: rgb(246, 246, 246);
+  border-radius: 70px 0 70px 0;
+  padding: 5px;
+  width: 85%;
+  height: 100%;
+}
+
+.fundadores {
+  background-color: #1D2A3A;
+  border-radius: 50px 0 50px 0;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.imgFundadores {
+  border-radius: 50px 0 50px 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tituloFundadores {
+  color: #1D2A3A;
+  padding: 10px;
+  text-align: center;
+}
+
+.descriçaoFundadores {
+  color: #343a40;
+  font-size: 15px;
+  padding-left: 10%;
+  line-height: 25px;
+  width: 85%;
+  grid-row: 2;
+  text-align: center;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="./css/form.css">
+  <link rel="icon" href="../img/LOGO-AWA-PRETA.png" />
+  <script src="./js/index.js"></script>
+  <title>AWA - Cadastro</title>
+</head>
+
+<body id="body">
+  <header>
+    <header>
+      <nav class="navBar">
+        <div class="logo">
+          <a href="../index.html" class="linkLogoMenu"><img src="../img/LOGO-AWA.png" href="#" class="logoMenu"></a>
+        </div>
+        <ul class="menu">
+          <li class="item1" id="item1"><a href="../index.html" class="link">Home</a></li>
+          <li class="item1" id="item2"><a href="../index.html#quemsomos" class="link">Quem Somos</a></li>
+          <li class="item1" id="item3"><a href="../index.html#projetos" class="link">Projetos</a>
+            <ul class="subLista">
+              <li class="subItem"><a href="../calculadora/calculadora.html" target="_blank" class="link">Calculadora</a>
+              </li>
+              <li class="subItem"><a href="../cadastro/cadastro.html" target="_blank" class="link">Cadastro</a></li>
+              <li class="subItem"><a href="../conversor/conversor.html" class="link">Conversor</a></li>
+            </ul>
+          </li>
+          <li class="item1" id="item4"><a href="#" class="link">Configurações</a>
+            <ul class="subLista">
+              <li class="subItem"><a onclick="mudarEstilo(1)" href="#" class="link">Alterar estilo</a></li>
+              <li class="subItem"><a onclick="mudarEstilo(2)" href="#" class="link">Estilo Padrão</a></li>
+            </ul>
+          </li>
+        </ul>
+        <span>
+          <a onclick="aumentarFonte(1)" ondblclick="aumentarFonte(2)" href="#">
+            <img src="../img/icons8-maiúscula-inicial-48.png" alt="Aumenta Fonte" class="aumentaFonte">
+          </a>
+        </span>
+      </nav>
+    </header>
+
+    <main>
+      <div id="bloco_formulario">
+        <section class="tudo">
+          <div id="formulario" action="#" onsubmit='valida()'>
+            <h1>Cadastre-se</h1>
+
+
+            <section class="informacoes">
+              <section id="form_name">
+                <label for="nome">Nome completo</label> <br>
+                <input id="name_input" class="respostas" type="text" name="nome" placeholder="Nome completo">
+              </section>
+            </section>
+
+            <section id="data">
+              <section class="informacoes">
+                <section id="dia_nascimento">
+                  <label for="dia_nascimento">Dia</label> <br>
+                  <input id="input_dia" class="respostas" type="number" name="dia_nascimento" id="dia_nascimento"
+                    placeholder="Dia de nascimento">
+                </section>
+              </section>
+
+              <section class="informacoes">
+                <section id="mes_nascimento">
+                  <label for="mes_nascimento">Mês</label> <br>
+                  <select class="respostas" name="mes_nascimento" id="mes_nascimento">
+                    <option value="janeiro">Janeiro</option>
+                    <option value="fevereiro">Fevereiro</option>
+                    <option value="marco">Março</option>
+                    <option value="abril">Abril</option>
+                    <option value="maio">Maio</option>
+                    <option value="junho">Junho</option>
+                    <option value="julho">Julho</option>
+                    <option value="agosto">Agosto</option>
+                    <option value="setembro">Setembro</option>
+                    <option value="outubro">Outubro</option>
+                    <option value="novembro">Novembro</option>
+                    <option value="dezembro">Dezembro</option>
+                  </select>
+                </section>
+              </section>
+
+              <section class="informacoes">
+                <section id="ano_nascimento">
+                  <label for="ano_nascimento">Ano</label> <br>
+                  <input id="input_ano" class="respostas" type="number" name="ano_nascimento"
+                    placeholder="Ano de nascimento" onblur="validaAno(this)">
+                </section>
+              </section>
+
+              <section class="informacoes">
+                <section id="genero">
+                  <label for="genero">Gênero</label> <br>
+                  <select id="genero_input" class="respostas" name="genero">
+                    <option value="">Selecione</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="indefinido">Não informado</option>
+                  </select>
+                </section>
+              </section>
+
+            </section>
+
+
+            <section id="cpf_email">
+              <section class="informacoes">
+                <section id="cpf">
+                  <label for="cpf">CPF</label> <br>
+                  <input onblur="VerificaCPF()" id="cpf_input" class="respostas" type="text" name="cpf"
+                    placeholder="Digite o seu CPF">
+                </section>
+              </section>
+
+              <section class="informacoes">
+                <section id="email">
+                  <label for="email">E-mail</label> <br>
+                  <input onblur="validacaoEmail()" id="input_email" class="respostas" type="text" name="email"
+                    placeholder="Digite o seu email">
+                </section>
+              </section>
+            </section>
+
+            <button onclick="blocoExibicao()" class="button_form" id="button1" type="submit">Enviar</button>
+
+          </div>
+        </section>
+      </div>
+
+      <div id="bloco_confirmacao">
+        <article id="article">
+          <p id="confirmacaoDados"></p>
+        </article>
+      </div>
+
+    </main>
+    <footer>
+      <a href="#"><img src="../img/LOGO-AWA-PRETA.png" class="logoFooter"></a>
+      <h6 class="textoFooter">© COPYRIGHT 2021 | AWA - TODOS OS DIREITOS RESERVADOS</h6>
+    </footer>
+</body>
+
+</html>

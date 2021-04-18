@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0
+}
+
+main {
+  min-height: calc(100vh - 13vh - 15vh);
+  /* 100vh é o tamanho total da tela 
+  12vh é a altura do header
+  15vh a altura do footer*/
+}
+
+/* Configuração Header e Menu*/
+
+header {
+  background-color: #1D2A3A;
+  height: 12vh;
+}
+
+.menu {
+  background-color: #1D2A3A;
+}
+
+.item1 {
+  float: left;
+  height: 12vh;
+  left: 200px;
+  list-style: none;
+  padding: 20px 10px;
+  position: relative;
+  text-align: center;
+  width: 260px;
+}
+
+.item1:hover {
+  background-color: #2b486b;
+}
+
+.item1:hover .subLista {
+  display: block;
+}
+
+.item2 {
+  float: left;
+  height: 12vh;
+  left: 200px;
+  list-style: none;
+  padding: 20px 10px;
+  position: relative;
+  text-align: center;
+  width: 260px;
+}
+
+.item2:hover {
+  background-color: #ffce4b;
+}
+
+.item2:hover .subLista {
+  display: block;
+}
+
+.subLista {
+  background-color: #23a7f1;
+  display: none;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 75px;
+}
+
+.subItem {
+  list-style: none;
+  padding: 5px 0;
+  position: relative;
+  width: 260px;
+}
+
+.subItem:hover {
+  background-color: #2b486b;
+}
+
+.link {
+  color: white;
+  padding: 20px 60px;
+  text-decoration: none;
+}
+
+.logo {
+  left: 50px;
+  position: absolute;
+  top: 5px;
+}
+
+.navBar {
+  height: 60px;
+  left: 150px;
+  width: 100%;
+}
+
+.logoMenu {
+  position: absolute;
+  width: 65px;
+}
+
+.aumentaFonte {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  width: 40px;
+}
+
+/* Alterando as Fontes da Página */
+
+.fonteGrande {
+  font-size: large;
+}
+
+.fontePadrao {
+  font-size: medium;
+}
